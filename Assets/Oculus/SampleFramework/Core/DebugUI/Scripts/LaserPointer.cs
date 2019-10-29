@@ -24,10 +24,15 @@ public class LaserPointer : OVRCursor
         OnWhenHitTarget,  // laser beam only activates when hit valid target
     }
 
+    //maxr alternative method
+    //[SerializeField] LaserBeamBehavior setBehavior;
+
     public GameObject cursorVisual;
     public float maxLength = 10.0f;
 
-    private LaserBeamBehavior _laserBeamBehavior;
+    //maxr mod to public
+    public LaserBeamBehavior _laserBeamBehavior;
+    
 
     public LaserBeamBehavior laserBeamBehavior
     {
@@ -60,6 +65,8 @@ public class LaserPointer : OVRCursor
 
     private void Start()
     {
+        //maxr alternative method
+        //_laserBeamBehavior = setBehavior;
         if (cursorVisual) cursorVisual.SetActive(false);
     }
 
